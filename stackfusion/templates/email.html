@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<div id="centered">
+    
+
+        <h3 class="font horcent"><i>Your Email</i></h3>
+        <b></b><input type="email" placeholder="Enter Your Email " name='email'  value="{{email}}"  required="Enter Email"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Name</i></h3>
+        <b></b><input type="text" placeholder="Enter Your Name " name='name' value="{{ name }}" required="Enter Name"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Birthday</i></h3>
+        <b></b><input type="date"  name="dob" placeholder="date of Birth" value="{{ dob }}" required="Enter Birthday"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Phone No</i></h3>
+        <b><b><input type="number"  pattern=".{10,10}" value="{{ phone }}" placeholder="Enter your Phone Number" name='phone_no' required="10 characters PhoneNo required" title="10 Characters" /></b>
+        <hr><hr></div> 
+
+</div>
+
+
+{% endblock body %}

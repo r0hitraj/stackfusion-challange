@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<div id="centered">
+    <form action=""  method='POST'>
+        {% csrf_token %}
+        <h3 class="font horcent"><i>Your Email</i></h3>
+        <b></b><input type="email" placeholder="Enter Your Email " name='email' required="Enter Email"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Name</i></h3>
+        <b></b><input type="text" placeholder="Enter Your Name " name='name' required="Enter Name"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Birthday</i></h3>
+        <b></b><input type="date"  name="dob" placeholder="date of Birth" required="Enter Birthday"/></b>
+        <hr>
+        <h3 class="font horcent"><i>Phone No</i></h3>
+        <b><b><input type="number"  pattern=".{10,10}" placeholder="Enter your Phone Number" name='phone_no' required="10 characters PhoneNo required" title="10 Characters" /></b>
+        <hr><button type='submit'  class="grn-button"><b>Submit</b></button>
+        <hr><hr></div> 
+    </form>
+    {% for message in messages %}
+            <h4 class="font horcent"><i class="green"><b>{{message}}</b></i></h4>
+          {% endfor %}
+</div>
+
+{% endblock body %}
